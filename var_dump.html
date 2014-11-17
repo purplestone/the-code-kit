@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>var_dump</title>
+		<meta name="author" content="" />
+		<meta name="keywords" content="" />
+		<meta name="description" content="" />
+		<script type="text/javascript" src="var_dump.js"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+	</head>
+
+	<body>
+		<div class="main">
+<pre>
+var_dump({
+	a:'aaaa',
+	b:'bbbb',
+	c:{
+		c:'cccc'
+	}
+});
+</pre>
+			<button id="b1" type="button" class="btn btn-primary">var_dump(Object)</button>
+			<hr />
+<pre>
+var_dump('This is string.');
+</pre>
+			<button id="b2" type="button" class="btn btn-primary">var_dump(String)</button>
+			<hr />
+<pre>
+var_dump(['ele1', 'ele2', 'ele3']);
+</pre>
+			<button id="b3" type="button" class="btn btn-primary">var_dump(Array)</button>
+			<hr />
+<pre>
+print_r({
+	a:'aaaa',
+	b:'bbbb',
+	c:{
+		c:'cccc'
+	},
+	toString:function () {
+		return 'obj.toString';
+	}
+});
+</pre>
+			<button id="b4" type="button" class="btn btn-primary">pring_r(Object)</button>
+			<hr />
+<pre>
+print_r('This is string.');
+</pre>
+			<button id="b5" type="button" class="btn btn-primary">pring_r(String)</button>
+			<hr />
+<pre>
+print_r(['ele1', 'ele2', 'ele3']);
+</pre>
+			<button id="b6" type="button" class="btn btn-primary">pring_r(Array)</button>
+			<hr />
+
+		</div>
+		<script type="text/javascript">
+		//<!--
+			document.getElementById('b1').onclick = function () {
+				var_dump({
+					a:'aaaa',
+					b:'bbbb',
+					c:{
+						c:'cccc'
+					}
+				});
+			};
+			document.getElementById('b2').onclick = function () {
+				var_dump('This is string.');
+			};
+			document.getElementById('b3').onclick = function () {
+				var_dump(['ele1', 'ele2', 'ele3']);
+			};
+
+			document.getElementById('b4').onclick = function () {
+				print_r({
+					a:'aaaa',
+					b:'bbbb',
+					c:{
+						c:'cccc'
+					},
+					toString:function () {
+						return 'obj.toString';
+					}
+				});
+			};
+			document.getElementById('b5').onclick = function () {
+				print_r('This is string.');
+			};
+			document.getElementById('b6').onclick = function () {
+				print_r(['ele1', 'ele2', 'ele3']);
+			};
+		//-->
+		</script>
+		<style type="text/css">
+			.main {
+				padding:2em;
+			}
+		</style>
+	</body>
+</html>
